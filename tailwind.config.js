@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily: {
+      satisfy: ['Satisfy', 'cursive'],
+      quicksand: ['Quicksand', 'sans-serif'],
+    },
   },
   variants: {
     extend: {},
