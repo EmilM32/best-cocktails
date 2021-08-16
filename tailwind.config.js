@@ -3,7 +3,11 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
+    },
     fontFamily: {
       satisfy: ['Satisfy', 'cursive'],
       quicksand: ['Quicksand', 'sans-serif'],

@@ -5,7 +5,7 @@ import { urls } from '../api/urls'
 
 const App = () => {
   const [{ data, loading, error }, refetch] = useAxios(urls.RANDOM)
-  if (data) console.log('🚀 ~ data', data.drinks[0])
+
   return (
     <div>
       <Topbar />
