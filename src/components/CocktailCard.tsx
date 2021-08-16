@@ -1,11 +1,13 @@
 import { ICocktailCard } from '../interfaces'
 import { IconError } from './icons/IconError'
 import { IconLoading } from './icons/IconLoading'
+import { IconReload } from './icons/IconReload'
 
 export const CocktailCard = ({
   data,
   loading,
   error,
+  refetch,
 }: ICocktailCard) => {
   return (
     <div>
@@ -23,15 +25,21 @@ export const CocktailCard = ({
           </div>
         )}
         {data && !loading && (
-          <div className="flex p-2 flex-col">
-            <span className="text-2xl text-center py-2">
-              {data.strDrink}
-            </span>
+          <div className="flex p-2 flex-col text-center">
+            <span className="text-2xl py-2">{data.strDrink}</span>
             <img
               src={data.strDrinkThumb}
               alt="drink"
               className="rounded-lg h-80"
             />
+            <span className="py-2">{data.strAlcoholic}</span>
+            {refetch && (
+              <div className="flex justify-center pb-2">
+                <button title="reload cocktail" onClick={refetch}>
+                  <IconReload />
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>

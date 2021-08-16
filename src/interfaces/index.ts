@@ -1,3 +1,5 @@
+import { AxiosPromise } from 'axios'
+
 export interface ISingleCocktail {
   idDrink: string
   strDrink: string
@@ -46,5 +48,8 @@ export interface ISingleCocktail {
 export interface ICocktailCard {
   loading: boolean
   error: boolean
-  data: ISingleCocktail
+  data?: ISingleCocktail
+  refetch?: () => AxiosPromise<{
+    drinks: ISingleCocktail[]
+  }>
 }
