@@ -2,6 +2,7 @@ import { ICocktailCard } from '../interfaces'
 import { IconError } from './icons/IconError'
 import { IconLoading } from './icons/IconLoading'
 import { IconReload } from './icons/IconReload'
+import { useTranslation } from 'react-i18next'
 
 export const CocktailCard = ({
   data,
@@ -9,6 +10,7 @@ export const CocktailCard = ({
   error,
   refetch,
 }: ICocktailCard) => {
+  const { t } = useTranslation()
   return (
     <div>
       <div className="px-4 text-white flex justify-center bg-green-800 hover:bg-green-900 rounded-lg transition duration-500 ease-in-out font-quicksand">
@@ -20,8 +22,8 @@ export const CocktailCard = ({
         {error && !loading && (
           <div className="flex flex-col items-center text-2xl my-5">
             <IconError />
-            <span>Cocktail failed</span>
-            <span>Try again later or drink water!</span>
+            <span>{t('error.cocktailFailed')}</span>
+            <span>{t('error.tryAgain')}</span>
           </div>
         )}
         {data && !loading && (
@@ -35,7 +37,7 @@ export const CocktailCard = ({
             <span className="py-2">{data.strAlcoholic}</span>
             {refetch && (
               <div className="flex justify-center pb-2">
-                <button title="reload cocktail" onClick={refetch}>
+                <button title={t('reloadTooltip')} onClick={refetch}>
                   <IconReload />
                 </button>
               </div>
