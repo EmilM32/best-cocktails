@@ -11,7 +11,7 @@ export const CocktailCard = ({
 }: ICocktailCard) => {
   return (
     <div>
-      <div className="w-96 text-white flex justify-center bg-green-800 hover:bg-green-900 rounded-lg transition duration-500 ease-in-out font-quicksand">
+      <div className="px-4 text-white flex justify-center bg-green-800 hover:bg-green-900 rounded-lg transition duration-500 ease-in-out font-quicksand">
         {loading && (
           <div className="my-5">
             <IconLoading />

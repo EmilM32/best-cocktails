@@ -11,8 +11,11 @@ const App = () => {
 
   return (
     <div>
-      <Topbar />
-      <div className="pt-24 flex justify-center">
+      <div className="sm:pb-24 pb-32">
+        <Topbar />
+      </div>
+
+      <div className="flex justify-center">
         <CocktailCard
           data={data?.drinks[0]}
           loading={loading}

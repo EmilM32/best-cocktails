@@ -1,8 +1,8 @@
 export const Topbar = () => {
   return (
-    <div className="bg-green-700 h-16 fixed w-screen">
-      <div className="flex justify-between mx-8 h-16 items-center">
-        <span className="font-satisfy text-3xl text-white">
+    <div className="bg-green-700 fixed w-screen">
+      <div className="flex justify-between mx-8 items-center flex-col sm:flex-row">
+        <span className="font-satisfy text-3xl text-white mt-2">
           Best Cocktails!
         </span>
         <div className="relative mr-6 my-2">
