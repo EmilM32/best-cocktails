@@ -1,16 +1,18 @@
+import { useTranslation } from 'react-i18next'
 import { EAvailableCategories, EAvailableGlass } from '../enums'
 import { SingleCategoryCard } from './SingleCategoryCard'
 
 interface IProps {
-  title: string
   isMainCategory: boolean
 }
 
-export const CategorySection = ({
-  title,
-  isMainCategory,
-}: IProps) => {
+export const CategorySection = ({ isMainCategory }: IProps) => {
+  const { t } = useTranslation()
+
   const type = isMainCategory ? EAvailableCategories : EAvailableGlass
+  const title = isMainCategory
+    ? t('categories.available')
+    : t('categories.glass')
 
   return (
     <>
