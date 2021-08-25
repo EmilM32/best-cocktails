@@ -1,5 +1,5 @@
 import useAxios from 'axios-hooks'
-import { CocktailCard } from './CocktailCard'
+import { CocktailCard } from './CocktailCard/index'
 import { Topbar } from './Topbar'
 import { urls } from '../api/urls'
 import { ISingleCocktail } from '../interfaces'
