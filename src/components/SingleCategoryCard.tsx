@@ -12,7 +12,7 @@ export const SingleCategoryCard = ({ name }: IProps) => {
     <div
       className="
       bg-green-500 text-white shadow-xl transition duration-500 ease-in-out
-        hover:shadow-2xl border-green-600 border w-48 h-20 flex justify-center items-center
+        hover:shadow-2xl border-green-600 border h-20 flex justify-center items-center
         cursor-pointer text-xl rounded
       "
     >

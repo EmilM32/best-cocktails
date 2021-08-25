@@ -10,11 +10,17 @@ export const Categories = () => {
       <span className="text-white font-quicksand text-3xl pt-6 text-center">
         {t('categories.available')}
       </span>
-      <div className="m-6 flex justify-around">
-        <SingleCategoryCard name={EAvailableCategories.ALCOHOLIC} />
-        <SingleCategoryCard
-          name={EAvailableCategories.NON_ALCOHOLIC}
-        />
+      <div className="m-6 grid grid-cols-2 gap-4 justify-items-stretch">
+        {Object.keys(EAvailableCategories).map((category) => (
+          <SingleCategoryCard
+            name={
+              EAvailableCategories[
+                category as keyof typeof EAvailableCategories
+              ]
+            }
+            key={category}
+          />
+        ))}
       </div>
     </div>
   )

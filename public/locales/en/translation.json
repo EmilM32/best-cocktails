@@ -9,6 +9,8 @@
   "categories": {
     "available": "Available categories",
     "alcoholic": "Alcoholic",
-    "nonalcoholic": "Non aloholic"
+    "nonalcoholic": "Non aloholic",
+    "cocktail": "Cocktail",
+    "ordinaryDrink": "Ordinary drink"
   }
 }
