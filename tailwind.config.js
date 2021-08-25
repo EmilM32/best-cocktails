@@ -7,6 +7,9 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       },
+      height: {
+        110: '500px',
+      },
     },
     fontFamily: {
       satisfy: ['Satisfy', 'cursive'],

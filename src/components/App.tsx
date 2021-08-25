@@ -3,6 +3,7 @@ import { CocktailCard } from './CocktailCard/index'
 import { Topbar } from './Topbar'
 import { urls } from '../api/urls'
 import { ISingleCocktail } from '../interfaces'
+import { Categories } from './Categories'
 
 const App = () => {
   const [{ data, loading, error }, refetch] = useAxios<{
@@ -15,7 +16,8 @@ const App = () => {
         <Topbar />
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-around">
+        <Categories />
         <CocktailCard
           data={data?.drinks[0]}
           loading={loading}

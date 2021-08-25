@@ -5,5 +5,10 @@
   "error": {
     "cocktailFailed": "Cocktail failed",
     "tryAgain": "Try again later or drink water!"
+  },
+  "categories": {
+    "available": "Available categories",
+    "alcoholic": "Alcoholic",
+    "nonalcoholic": "Non aloholic"
   }
 }
