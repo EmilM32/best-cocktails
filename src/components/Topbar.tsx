@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 export const Topbar = () => {
   const { t } = useTranslation()
   return (
-    <div className="bg-green-700 fixed w-screen">
+    <div className="bg-green-700 fixed w-screen z-10">
       <div className="flex justify-between mx-8 items-center flex-col sm:flex-row">
         <span className="font-satisfy text-3xl text-white mt-2">
           {t('title')}

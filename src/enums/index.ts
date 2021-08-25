@@ -4,3 +4,8 @@ export enum EAvailableCategories {
   COCKTAIL = 'cocktail',
   ORDINARY_DRINK = 'ordinaryDrink',
 }
+
+export enum EAvailableGlass {
+  COCKTAIL = 'cocktailGlass',
+  CHAMPAGNE = 'champagneFlute',
+}

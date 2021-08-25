@@ -1,8 +1,8 @@
-import { EAvailableCategories } from '../enums'
+import { EAvailableCategories, EAvailableGlass } from '../enums'
 import { useTranslation } from 'react-i18next'
 
 interface IProps {
-  name: EAvailableCategories
+  name: EAvailableCategories | EAvailableGlass
 }
 
 export const SingleCategoryCard = ({ name }: IProps) => {

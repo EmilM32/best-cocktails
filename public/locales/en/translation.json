@@ -11,6 +11,9 @@
     "alcoholic": "Alcoholic",
     "nonalcoholic": "Non aloholic",
     "cocktail": "Cocktail",
-    "ordinaryDrink": "Ordinary drink"
+    "ordinaryDrink": "Ordinary drink",
+    "glass": "Glass",
+    "cocktailGlass": "Cocktail glass",
+    "champagneFlute": "Champagne flute"
   }
 }
