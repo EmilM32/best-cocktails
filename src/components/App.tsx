@@ -16,7 +16,7 @@ const App = () => {
         <Topbar />
       </div>
 
-      <div className="flex justify-around">
+      <div className="flex md:justify-around flex-col md:flex-row items-center">
         <Categories />
         <CocktailCard
           data={data?.drinks[0]}
