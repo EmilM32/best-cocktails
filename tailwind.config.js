@@ -8,7 +8,8 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
       },
       height: {
-        110: '500px',
+        110: '480px',
+        100: '420px',
       },
     },
     fontFamily: {

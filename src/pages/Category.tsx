@@ -1,8 +1,8 @@
 import useAxios from 'axios-hooks'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { CocktailCard } from '../components/CocktailCard'
 import { EAvailableCategories, EAvailableGlass } from '../enums'
-import { ISingleCocktail } from '../interfaces'
+import { IShortCocktail } from '../interfaces'
 import { getCategoryUrlByParam } from '../utils'
 
 export const Category = () => {
@@ -10,17 +10,33 @@ export const Category = () => {
     title: EAvailableCategories | EAvailableGlass
   }>()
 
+  const history = useHistory()
+
+  const url = getCategoryUrlByParam(title)
+
   const [{ data, loading, error }] = useAxios<{
-    drinks: ISingleCocktail[]
-  }>(getCategoryUrlByParam(title))
+    drinks: IShortCocktail[]
+  }>(url)
+
+  const handleClick = (id: string): void => {
+    history.push(`/cocktail/${id}`)
+  }
 
   return (
-    <div>
-      <CocktailCard
-        data={data?.drinks[0]}
-        loading={loading}
-        error={!!error?.message}
-      />
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 mx-4 justify-items-center">
+      {data?.drinks.map((item) => (
+        <div
+          key={item.idDrink}
+          className="cursor-pointer"
+          onClick={() => handleClick(item.idDrink)}
+        >
+          <CocktailCard
+            data={item}
+            loading={loading}
+            error={!!error?.message}
+          />
+        </div>
+      ))}
     </div>
   )
 }

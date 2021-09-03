@@ -1,8 +1,11 @@
 import { AxiosPromise } from 'axios'
 
-export interface ISingleCocktail {
+export interface IShortCocktail {
   idDrink: string
   strDrink: string
+  strDrinkThumb: string
+}
+export interface ISingleCocktail extends IShortCocktail {
   strDrinkAlternate?: string
   strTags?: string
   strVideo?: string
@@ -10,7 +13,6 @@ export interface ISingleCocktail {
   strAlcoholic: string
   strGlass: string
   strInstructions: string
-  strDrinkThumb: string
   strIngredient1?: string
   strIngredient2?: string
   strIngredient3?: string
@@ -48,7 +50,7 @@ export interface ISingleCocktail {
 export interface ICocktailCard {
   loading: boolean
   error: boolean
-  data?: ISingleCocktail
+  data?: ISingleCocktail | IShortCocktail
   refetch?: () => AxiosPromise<{
     drinks: ISingleCocktail[]
   }>

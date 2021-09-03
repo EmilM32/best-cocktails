@@ -11,11 +11,13 @@ export const CocktailCard = ({
 }: ICocktailCard) => {
   return (
     <div
-      className="
-      h-110 w-96 px-4 text-white flex items-center justify-center
+      className={`
+      ${
+        refetch ? 'h-110' : 'h-100'
+      } w-96 px-4 text-white flex items-center justify-center
       bg-green-800 hover:bg-green-900 rounded-lg transition
       duration-500 ease-in-out font-quicksand
-    "
+    `}
     >
       {loading && <CocktailCardLoading />}
       {error && !loading && <CocktailCardError />}

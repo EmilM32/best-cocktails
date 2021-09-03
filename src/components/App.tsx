@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import { Home } from '../pages/Home'
 import { Category } from '../pages/Category'
+import { Cocktail } from '../pages/Cocktail'
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
         </Route>
         <Route path="/category/:title">
           <Category />
+        </Route>
+        <Route path="/cocktail/:id">
+          <Cocktail />
         </Route>
       </Switch>
     </Router>
