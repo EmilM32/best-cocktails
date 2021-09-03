@@ -1,31 +1,27 @@
-import useAxios from 'axios-hooks'
-import { CocktailCard } from './CocktailCard/index'
 import { Topbar } from './Topbar'
-import { urls } from '../api/urls'
-import { ISingleCocktail } from '../interfaces'
-import { Categories } from './Categories'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
+import { Home } from '../pages/Home'
+import { Category } from '../pages/Category'
 
 const App = () => {
-  const [{ data, loading, error }, refetch] = useAxios<{
-    drinks: ISingleCocktail[]
-  }>(urls.RANDOM)
-
   return (
-    <div>
+    <Router>
       <div className="sm:pb-24 pb-32">
         <Topbar />
       </div>
-
-      <div className="flex md:justify-around flex-col md:flex-row items-center">
-        <Categories />
-        <CocktailCard
-          data={data?.drinks[0]}
-          loading={loading}
-          error={!!error?.message}
-          refetch={refetch}
-        />
-      </div>
-    </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/category/:title">
+          <Category />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 

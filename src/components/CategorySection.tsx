@@ -16,7 +16,7 @@ export const CategorySection = ({ isMainCategory }: IProps) => {
 
   return (
     <>
-      <span className="text-white font-quicksand pt-6 text-3xl text-center">
+      <span className="text-white font-quicksand pt-6 text-3xl flex justify-center">
         {title}
       </span>
       <div className="m-6 grid grid-cols-2 gap-4 justify-items-stretch">
