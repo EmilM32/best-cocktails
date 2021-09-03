@@ -10,7 +10,7 @@ export const Category = () => {
     title: EAvailableCategories | EAvailableGlass
   }>()
 
-  const [{ data, loading, error }, refetch] = useAxios<{
+  const [{ data, loading, error }] = useAxios<{
     drinks: ISingleCocktail[]
   }>(getCategoryUrlByParam(title))
 
@@ -20,7 +20,6 @@ export const Category = () => {
         data={data?.drinks[0]}
         loading={loading}
         error={!!error?.message}
-        refetch={refetch}
       />
     </div>
   )
