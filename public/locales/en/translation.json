@@ -15,5 +15,14 @@
     "glass": "Glass",
     "cocktailGlass": "Cocktail glass",
     "champagneFlute": "Champagne flute"
+  },
+  "cocktail": {
+    "info": "Cocktail info",
+    "type": "type",
+    "category": "category",
+    "instruction": "Instruction",
+    "glass": "glass",
+    "ingredients": "ingredients",
+    "measures": "measures"
   }
 }
