@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { ISingleCocktail } from '../interfaces'
 import { ChipLabel } from './ChipLabel'
 import { useTranslation } from 'react-i18next'
-import { INGREDIENTS_REGEX, MEASURE_REGEX } from './constants'
+import { INGREDIENTS_REGEX, MEASURE_REGEX } from '../constants'
 
 interface IProps {
   data: ISingleCocktail
