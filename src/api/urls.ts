@@ -10,4 +10,5 @@ export const urls = {
   CATEGORY_COCKTAIL_GLASS: '/filter.php?g=Cocktail_glass',
   CATEGORY_CHAMPAGNE_FLUTE: '/filter.php?g=Champagne_flute',
   GET_COCKTAIL_BY_ID: (id: string): string => `/lookup.php?i=${id}`,
+  SEARCH_BY_NAME: (name: string): string => `/search.php?s=${name}`,
 }

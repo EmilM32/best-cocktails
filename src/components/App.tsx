@@ -7,6 +7,7 @@ import {
 import { Home } from '../pages/Home'
 import { Category } from '../pages/Category'
 import { Cocktail } from '../pages/Cocktail'
+import { SearchResult } from '../pages/SearchResult'
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
         </Route>
         <Route path="/cocktail/:id">
           <Cocktail />
+        </Route>
+        <Route path="/search-result/:search">
+          <SearchResult />
         </Route>
       </Switch>
     </Router>

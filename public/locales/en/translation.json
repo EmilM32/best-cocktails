@@ -2,6 +2,7 @@
   "search": "Search",
   "title": "Best Cocktails!",
   "reloadTooltip": "reload cocktail",
+  "noResults": "No results",
   "error": {
     "cocktailFailed": "Cocktail failed",
     "tryAgain": "Try again later or drink water!"

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { SearchInput } from './SearchInput'
 
 export const Topbar = () => {
   const { t } = useTranslation()
@@ -12,11 +13,7 @@ export const Topbar = () => {
           </span>
         </Link>
         <div className="relative mr-6 my-2">
-          <input
-            type="search"
-            className="bg-purple-white shadow rounded border-0 p-2 outline-none"
-            placeholder={t('search')}
-          />
+          <SearchInput />
         </div>
       </div>
     </div>
